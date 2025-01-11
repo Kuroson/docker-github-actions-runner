@@ -9,6 +9,9 @@ ARG GH_RUNNER_VERSION="2.321.0"
 
 ARG TARGETPLATFORM
 
+RUN apt-get update
+RUN apt-get install libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libnss3 libxss1 libasound2 libxtst6 xauth xvfb -y
+
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 WORKDIR /actions-runner
